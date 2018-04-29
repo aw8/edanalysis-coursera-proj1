@@ -19,7 +19,7 @@ powerdata$DateTime <- strptime(powerdata$DateTime, format="%d/%m/%Y %H:%M:%S")
 
 #draw plot
 par(mfrow = c(1,1))
-with(powerdata, plot(x=DateTime, y=Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)"))
+with(powerdata, plot(x=DateTime, y=Global_active_power, type="l", xlab="Date/Time", ylab="Global Active Power (kilowatts)"))
 
 #output png file and close the graphics device
 dev.copy(png, file="plot2.png")

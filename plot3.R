@@ -18,7 +18,7 @@ powerdata$DateTime <- strptime(powerdata$DateTime, format="%d/%m/%Y %H:%M:%S")
 #draw plot
 par(mfrow = c(1,1))
 #submetering 1
-with(powerdata, plot(x=DateTime, y=Sub_metering_1, type="l", xlab="", ylab="Energy Sub Metering"))
+with(powerdata, plot(x=DateTime, y=Sub_metering_1, type="l", xlab="Date/Time", ylab="Energy Sub Metering"))
 #submetering 2
 with(powerdata, points(x=DateTime, y=Sub_metering_2, type="l", col="red"))
 #submetering 3
