@@ -11,10 +11,16 @@ powerdata <- subset(powerdataall, Date == "1/2/2007" | Date =="2/2/2007")
 #remove powerdataall to save space
 rm(powerdataall)
 
-#create plot
-####
+#first, fix the dates
+powerdata$Date <- paste(powerdata$Date, powerdata$Time)
+powerdata <- select(powerdata, -Time)
+powerdata <- rename(powerdata, DateTime = Date)
+powerdata$DateTime <- strptime(powerdata$DateTime, format="%d/%m/%Y %H:%M:%S")
+
+#draw plot
+
 
 #output png file and close the graphics device
 dev.copy(png, file="plot3.png")
 dev.off()
-#note that the output png file will be located in the current working directory
+#note: the output png file will be located in the current working directory

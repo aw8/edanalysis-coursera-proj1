@@ -17,4 +17,4 @@ with(powerdata, hist(as.numeric(Global_active_power), col="red", xlab="Global Ac
 #output png file and close the graphics device
 dev.copy(png, file="plot1.png")
 dev.off()
-#note that the output png file will be located in the current working directory
+#note: the output png file will be located in the current working directory

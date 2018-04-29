@@ -17,4 +17,4 @@ rm(powerdataall)
 #output png file and close the graphics device
 dev.copy(png, file="plot4.png")
 dev.off()
-#note that the output png file will be located in the current working directory
+#note: the output png file will be located in the current working directory
