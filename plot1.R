@@ -8,10 +8,9 @@
 powerdataall <- read.table("household_power_consumption.txt", sep=";", header=TRUE, stringsAsFactors = FALSE)
 #subset for only 1/2/2007 and 2/2/2007 as required
 powerdata <- subset(powerdataall, Date == "1/2/2007" | Date =="2/2/2007")
-#remove powerdataall to save space
-rm(powerdataall)
 
 #create plot
+par(mfrow = c(1,1))
 with(powerdata, hist(as.numeric(Global_active_power), col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power"))
 
 #output png file and close the graphics device
